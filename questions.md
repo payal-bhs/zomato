@@ -26,12 +26,14 @@ In the above code, I have used ```useSelector, useDispatch and useState```
 
 ## How would you track down a performance issue in production? Have you ever had to do this?
 
-To trackdown production performance issues, I have used Sentry and Datadog and Lighthouse CI.
+To trackdown production performance issues, I have used Sentry and Datadog and Lighthouse CI. Many times I have resolved bugs using sentry. It provide the log tail which help me to find the exact issue.
 
 ## How would you improve the API that you just used
 
 To get the restaurant results, I have to first fetch city_id and then have to do an actual search api call. I would definitely work on it and find out any alternatives.
 Other than that I also like to add some caching to API calls.
+
+P.S. : Initially i tried to search city with ```/search?q=cityName``` but I was always getting 0 results. So I ended up with ```entity_type and entity_id```
 
 
 ## Please describe yourself using JSON.
