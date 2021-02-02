@@ -1,12 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "./RestaurantContainer.style.scss";
-// import { Link } from "react-router-dom";
 
 const RestaurantContainer = () => {
     const stateRestaurant = useSelector(state => state.restaurant);
     const stateSearch = useSelector(state => state.search);
-    console.log("RestaurantContainer => ", stateRestaurant);
     // list of search restaurants
     return (
         <div className="wrapper">
@@ -34,7 +32,6 @@ const RestaurantContainer = () => {
 export default RestaurantContainer;
 
 export const RestaurantCard = (restaurant) => {
-    console.log("restaurant => ", restaurant);
     return (
         <figure className="restaurant-card">
             <figcaption className="card-body">
@@ -81,29 +78,3 @@ const Rating = (userRating = 0) => {
         </ul>
     )
 }
-
-// export const RestaurantCard = (restaurant) => {
-//     console.log("restaurant => ", restaurant);
-//     return (
-//         <figure className="card">
-//             <div className="card_image">
-//                 <img data-src={restaurant.restaurant.thumb} alt={restaurant.restaurant.cuisines}  />
-//             </div>
-//             <figcaption className="card_content">
-//                 <h2 className="card_title">{restaurant.restaurant.name}</h2>
-//                 {/* <p className="card_text">{restaurant.restaurant.location.locality_verbose}</p> */}
-//                 <p className="card_text">{restaurant.restaurant.cuisines}</p>
-//                 <div className="rating">
-//                     <ul>
-//                         <li><i className="fa fa-star checked"></i></li>
-//                         <li><i className="fa fa-star checked"></i></li>
-//                         <li><i className="fa fa-star checked"></i></li>
-//                         <li><i className="fa fa-star"></i></li>
-//                         <li><i className="fa fa-star"></i></li>
-//                     </ul>
-//                 </div>
-//                 <button className="btn card_btn">Read More</button>
-//             </figcaption>
-//         </figure>
-//     );
-// };

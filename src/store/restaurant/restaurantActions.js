@@ -41,16 +41,12 @@ export const fetchRestaurant = (searchParams) => {
             }
         })
         .then(response => {
-            // response.data is the restaurant data
-            console.log("fetchRestaurant response => ", response);
             const cityData = response.data?.location_suggestions?.[0] || [];
-            console.log("fetchRestaurant cityData => ", cityData);
 
             const params = new URLSearchParams();
             params.set("entity_type", "city");
             params.set("entity_id", cityData.id);
             params.set("q", searchParams.refine);
-            console.log("fetchRestaurant params => ", params.toString());
 
             // search query 
             axios.get(`https://developers.zomato.com/api/v2.1/search?${params.toString()}`, {
@@ -60,39 +56,15 @@ export const fetchRestaurant = (searchParams) => {
                 }
             })
             .then(response => {
-                console.log("fetchRestaurant response => ", response);
                 const restaurant = response.data?.restaurants || [];
                 dispatch(fetchRestaurantSuccess(restaurant))
             })
             .catch(error => {
-                console.log("fetchRestaurant error => ", error);
-                // error.message is the error message
                 dispatch(fetchRestaurantFailure(error.message))
             });
         })
         .catch(error => {
-            console.log("fetchRestaurant error => ", error);
-            // error.message is the error message
             dispatch(fetchRestaurantFailure(error.message))
         });
-
-        // axios.get(`https://developers.zomato.com/api/v2.1/search?q=${city}`, {
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         "user-key": ZOMATO_API_KEY
-        //     }
-        // })
-        // .then(response => {
-        //     // response.data is the restaurant data
-        //     console.log("fetchRestaurant response => ", response);
-        //     const restaurant = response.data?.restaurants || [];
-        //     // const restaurant = response.data?.location_suggestions || [];
-        //     dispatch(fetchRestaurantSuccess(restaurant))
-        // })
-        // .catch(error => {
-        //     console.log("fetchRestaurant error => ", error);
-        //     // error.message is the error message
-        //     dispatch(fetchRestaurantFailure(error.message))
-        // });
     }
 };
