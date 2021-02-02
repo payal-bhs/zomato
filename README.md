@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+# zomato
+A react app which uses zomato’s api to suggest nearby restaurants  
+
+### Setup
+
+* Get the repo https://github.com/payal-bhs/zomato
+* Install the required dependencies - `$npm install`
+* Get your api key from the [zomato developer site](https://developers.zomato.com/api)
+* Create a file name `.env` at the root directory of your application
+* Type REACT_APP_ZOMATO_API_KEY = '`<your_apikey>`' in `.env` and save the file
+
+
 ## Available Scripts
 
 In the project directory, you can run:
