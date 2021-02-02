@@ -3,6 +3,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # zomato
 A react app which uses zomato’s api to suggest nearby restaurants  
 
+### heroku link
+
+[zomato task](https://evening-citadel-06669.herokuapp.com/)
+
 ### Setup
 
 * Get the repo https://github.com/payal-bhs/zomato
