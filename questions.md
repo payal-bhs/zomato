@@ -2,7 +2,7 @@
 
 ## How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add
 
-I had only one day to work on it, so after finishing my routine day work I hardly got 3 hours to work on this task. If I had more time I would have implemented the project using typescript, ESLint and Enzyme testing. With this the code would become more reliable and secure.I added only one test, because of the lack of time. I would have add more component testing.
+I had only one day to work on it, so after finishing my routine day work I spent around 4 hours working on this task. If I had more time I would have implemented the project using typescript, ESLint and Enzyme testing. With this the code would become more reliable and secure.I added only one test, because of the lack of time. I would have added more component testing.
 
 ## What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
