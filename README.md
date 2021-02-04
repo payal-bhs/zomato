@@ -5,7 +5,7 @@ A react app which uses zomato’s api to suggest nearby restaurants
 
 ### heroku link
 
-[zomato task](https://evening-citadel-06669.herokuapp.com/)
+[zomato work](https://evening-citadel-06669.herokuapp.com/)
 
 ### Setup
 
